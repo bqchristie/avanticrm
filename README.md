@@ -42,3 +42,4 @@
 * build pipeline
 * styling
 * environment configuration
+* usability issues

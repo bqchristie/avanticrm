@@ -1,0 +1,42 @@
+.customer-list-item h4 {
+    margin-bottom: 0px;
+    margin-top: 0px;
+}
+
+.customer-list-item {
+    margin-bottom: 30px;
+}
+
+.customer-list-item md-input-container {
+    margin-top: 3px;
+}
+
+address {
+    margin-top: 3px;
+}
+
+a .material-icons {
+    color: rgba(29, 29, 29, 0.15);
+}
+
+a .material-icons:hover {
+    color: rgb(63, 81, 181)
+}
+
+.dialog {
+    width: 450px;
+    padding: 10px;
+    padding-top: 20px;
+}
+
+.dialog md-input-container {
+    margin-top: 0px;
+}
+
+.search-box {
+    font-size: 16px;
+    border-radius: 4px 4px 4px 4px;
+    padding: 4px;
+    padding-left: 8px;
+    border:none;
+}
