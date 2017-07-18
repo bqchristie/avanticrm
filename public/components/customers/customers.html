@@ -13,7 +13,7 @@
         </md-card>
     </div>
     <md-list flex>
-        <md-list-item ng-repeat="customer in vm.customers" layout="row">
+        <md-list-item ng-repeat="customer in vm.customers | filter:vm.query" layout="row">
             <md-list-item-text class="customer-list-item" flex layout="row">
                 <div flex>
                     <div layout="row">

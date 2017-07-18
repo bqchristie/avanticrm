@@ -16,6 +16,7 @@
         vm.showContactDialog = showContactDialog;
         vm.deleteCustomer = deleteCustomer;
         vm.deleteContact = deleteContact;
+        vm.query = "";
 
         activate();
 
@@ -73,6 +74,13 @@
                 })
             })
         }
+
+        $scope.$on('searchTextChange', function (event, data) {
+            console.log("Search Text....");
+            console.log(data);
+            vm.query = data;
+        });
+
 
         function CustomerDialogController($scope, $mdDialog) {
 

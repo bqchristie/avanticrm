@@ -17,6 +17,13 @@
         function activate() {
             console.log("layout" + vm.title);
         }
+
+        $scope.$watch('vm.searchText', function (newValue, oldValue) {
+            if(newValue) {
+                $scope.$broadcast('searchTextChange', newValue);
+            }
+        });
+
     }
 
 })();
