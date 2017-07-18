@@ -26,6 +26,7 @@
         ////////////////
 
         function activate() {
+            console.log("activating");
             crmService.getCustomers().then(function(res){
                 vm.customers = res.data;
             }).catch(function(err){
@@ -35,7 +36,7 @@
 
         function deleteCustomer(customer){
             crmService.deleteCustomer(customer).then(function(data){
-                vm.customers = _.remove(vm.customers,{_id:customer._id});
+                _.remove(vm.customers,{_id:customer._id});
             }).catch(function(err){
                 console.error(err);
             });

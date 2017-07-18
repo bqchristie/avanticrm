@@ -13,7 +13,7 @@
 })();
 
 
-angular.module('avanti').config(['$routeProvider', function ($routeProvider) {
+angular.module('avanti').config(['$routeProvider', '$locationProvider',function ($routeProvider, $locationProvider) {
     $routeProvider
     // Home
         .when("/",
@@ -30,4 +30,6 @@ angular.module('avanti').config(['$routeProvider', function ($routeProvider) {
                 controllerAs: "vm"
             }
         )
+
+    $locationProvider.html5Mode(true);
 }]);
