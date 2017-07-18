@@ -10,6 +10,7 @@
 
 ### Client
 * Client is an angular app served by the same app.js that hosts the api.
+* Files are found undr public
 * Material is used for layout and components.
 
 
