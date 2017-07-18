@@ -2,6 +2,12 @@
 
 ## Overview
 
+
+### Repository with the latest.
+You can clone or grabd the latest .zip here.
+
+https://github.com/bqchristie/avanticrm/
+
 ### Backend
 * The API portion of the application is a node express app that talks to a cloud based MongoDB.
 * The main application is in app.js which has the route configs, middleware etc.
