@@ -1,0 +1,50 @@
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Angular Material style sheet -->
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+
+
+<body ng-app="avanti" ng-cloak ng-controller="LayoutCtrl as vm">
+
+<md-toolbar layout="row" class="md-toolbar-tools">
+    <div flex="grow" layout="row">
+        <div flex="stretch">
+            <h1>Avanti - CRM</h1>
+        </div>
+        <div flex style="text-align: right">
+            <input type="text" placeholder="Search">
+        </div>
+    </div>
+</md-toolbar>
+<div flex layout="row">
+    <md-content flex id="content">
+        <div flex layout="column">
+            <div ng-view>
+
+            </div>
+        </div>
+    </md-content>
+</div>
+
+
+<!-- Angular Material requires Angular.js Libraries -->
+<script src="bower_components/angular/angular.min.js"></script>
+<script src="bower_components/angular-animate/angular-animate.min.js"></script>
+<script src="bower_components/angular-aria/angular-aria.min.js"></script>
+<script src="bower_components/angular-messages/angular-messages.min.js"></script>
+<script src="bower_components/angular-route/angular-route.min.js"></script>
+<script src="bower_components/lodash/dist/lodash.min.js"></script>
+
+<!-- Angular Material Library -->
+<script src="bower_components/angular-material/angular-material.min.js"></script>
+
+
+<script src="index.module.js"></script>
+<script src="components/layout/layout.ctrl.js"></script>
+<script src="components/customers/customers.ctrl.js"></script>
+<script src="components/dataservices/data.srvc.js"></script>
+</body>
+</html>

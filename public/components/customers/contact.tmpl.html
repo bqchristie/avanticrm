@@ -1,0 +1,32 @@
+<md-dialog>
+    <md-toolbar>
+        <md-title>
+            <div class="md-toolbar-tools">
+                Add Contact
+            </div>
+        </md-title>
+    </md-toolbar>
+    <md-dialog-content class="dialog" layout="column">
+        <form name="contactForm" flex>
+
+            <md-input-container class="md-block">
+                <label>First Name</label>
+                <input ng-model="vm.contact.firstName">
+            </md-input-container>
+
+            <md-input-container class="md-block">
+                <label>Last Name</label>
+                <input ng-model="vm.contact.lastName">
+            </md-input-container>
+
+            <md-input-container class="md-block">
+                <label>Phone:</label>
+                <input ng-model="vm.contact.phone">
+            </md-input-container>
+        </form>
+
+    </md-dialog-content>
+    <md-dialog-actions>
+        <md-button class="md-raised" ng-click="vm.addContact()">Add Contact</md-button>
+    </md-dialog-actions>
+</md-dialog>

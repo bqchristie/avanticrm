@@ -1,0 +1,54 @@
+<md-dialog>
+    <md-toolbar>
+        <md-title>
+            <div class="md-toolbar-tools">
+                Add Customer
+            </div>
+        </md-title>
+    </md-toolbar>
+    <md-dialog-content class="dialog" layout="column">
+        <form name="customerForm" flex>
+
+            <md-input-container class="md-block">
+                <label>Name</label>
+                <input ng-model="vm.customer.name">
+            </md-input-container>
+
+            <md-input-container class="md-block">
+                <label>Address</label>
+                <input ng-model="vm.customer.address">
+            </md-input-container>
+
+            <div flex layout="row">
+                <md-input-container flex="70">
+                    <label>City</label>
+                    <input ng-model="vm.customer.city">
+
+                </md-input-container>
+                <md-input-container flex="30">
+                    <label>Province</label>
+                    <md-select ng-model="vm.customer.province">
+                        <md-option ng-repeat="province in vm.provinces" value="{{province}}">
+                            {{province}}
+                        </md-option>
+                    </md-select>
+                </md-input-container>
+            </div>
+
+            <!--<md-input-container class="md-" flex-gt-sm>-->
+            <!---->
+            <!--</md-input-container>-->
+
+            <md-input-container class="md-block">
+                <label>Postal Code</label>
+                <input name="postalCode" ng-model="vm.customer.postalCode" placeholder="Postal Code"
+                       required>
+            </md-input-container>
+
+        </form>
+
+    </md-dialog-content>
+    <md-dialog-actions>
+        <md-button class="md-raised" ng-click="vm.addCustomer()">Add Customer</md-button>
+    </md-dialog-actions>
+</md-dialog>

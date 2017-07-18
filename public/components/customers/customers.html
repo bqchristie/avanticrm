@@ -1,0 +1,96 @@
+<style>
+    .customer-list-item h4 {
+        margin-bottom: 0px;
+        margin-top: 0px;
+    }
+
+    .customer-list-item {
+        margin-bottom: 30px;
+    }
+
+    .customer-list-item md-input-container {
+        margin-top: 3px;
+    }
+
+    address {
+        margin-top: 3px;
+    }
+
+    a .material-icons {
+        color: rgba(29, 29, 29, 0.15);
+    }
+
+    a .material-icons:hover {
+        color: rgb(63, 81, 181)
+    }
+
+    .dialog {
+        width: 450px;
+        padding: 10px;
+        padding-top: 20px;
+    }
+
+    .dialog md-input-container {
+        margin-top: 0px;
+    }
+
+</style>
+<md-card layout="column">
+    <div flex>
+        <div flex layout="row">
+            <div flex="stretch"></div>
+            <div flex style="text-align: right">
+                <md-button class="md-raised" ng-click="vm.showCustomerDialog($event)">Add Customer</md-button>
+            </div>
+        </div>
+    </div>
+    <div ng-if="vm.customers.length == 0" flex>
+        <md-card>
+            <h3>No Customers Added Yet</h3>
+        </md-card>
+    </div>
+    <md-list flex>
+        <md-list-item ng-repeat="customer in vm.customers" layout="row">
+            <md-list-item-text class="customer-list-item" flex layout="row">
+                <div flex>
+                    <div layout="row">
+                        <h4 flex>{{customer.name}}</h4>
+                        <div flex>
+                            <a href=""><i class="material-icons">edit</i></a>
+                            <a href="#" ng-click="vm.deleteCustomer(customer)"><i class="material-icons">delete</i></a>
+                        </div>
+                    </div>
+                    <address>
+                        {{customer.address}}<br>
+                        {{customer.city}} {{customer.province}} <br>
+                        {{customer.postalCode}}
+                    </address>
+                </div>
+                <div flex>
+                    <div layout="row">
+                        <h4 flex>Contacts</h4>
+                        <div flex>
+                            <a href="#" ng-click="vm.showContactDialog($event, customer)"><i class="material-icons">add</i></a>
+                        </div>
+                    </div>
+                    <div ng-if="!customer.contacts || customer.contacts.length === 0">Add a Contact</div>
+                    <md-input-container>
+                        <md-select ng-if="customer.contacts && customer.contacts.length > 0" flex ng-model="customer.selectedContact"
+                                   placeholder="Contacts">
+                            <md-option ng-value="contact" ng-repeat="contact in customer.contacts">{{ contact.firstName }} {{ contact.lastName }} - {{
+                                contact.phone }}
+                            </md-option>
+                        </md-select>
+                    </md-input-container>
+                    <div ng-if="customer.contacts && customer.contacts.length > 0">
+                        <a href=""><i class="material-icons">delete</i></a>
+                        <a href=""><i class="material-icons">call</i></a>
+                    </div>
+                </div>
+                <br>
+                <md-divider ng-if="!$last" flex="100"></md-divider>
+            </md-list-item-text>
+
+        </md-list-item>
+    </md-list>
+</md-card>

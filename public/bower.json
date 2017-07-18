@@ -1,0 +1,34 @@
+{
+  "name": "avanti",
+  "authors": [
+    "Bruce Christie <bqchristie@gmail.com>"
+  ],
+  "description": "Avanti CRM",
+  "main": "",
+  "license": "MIT",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "^1.6.1",
+    "angular-material": "^1.1.4",
+    "lodash": "^4.17.4",
+    "moment": "^2.17.1",
+    "ngmap": "^1.17.8",
+    "angular-chart.js": "^1.1.1",
+    "chart.js": "^2.5.0",
+    "angular-material-expansion-panel": "^0.7.2",
+    "angular-sanitize": "^1.6.4",
+    "angular-translate": "^2.13.1",
+    "angular-route": "^1.6.5"
+  },
+  "resolutions": {
+    "angular": "^1.6.1"
+  }
+}
