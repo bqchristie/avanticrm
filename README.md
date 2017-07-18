@@ -29,11 +29,12 @@
 ### Client
 
 * cd public
-* bower installl
+* bower install
 
 ## Start
 
-* node app.js
+* node app.js OR npm start
+* navigate to http://localhost:10010/
 
 ## Todos
 

@@ -11,6 +11,14 @@
     margin-top: 3px;
 }
 
+.customer h3 {
+    margin-left: 16px;
+}
+
+md-divider {
+    margin-bottom: 12px;
+}
+
 address {
     margin-top: 3px;
 }

@@ -1,7 +1,9 @@
-<md-card layout="column">
+<md-card layout="column" class="customer">
     <div flex>
         <div flex layout="row">
-            <div flex="stretch"></div>
+            <div flex="stretch">
+                <h3>Customers</h3>
+            </div>
             <div flex style="text-align: right">
                 <md-button class="md-raised" ng-click="vm.showCustomerDialog($event)">Add Customer</md-button>
             </div>
@@ -37,26 +39,32 @@
                         </div>
                     </div>
                     <div ng-if="!customer.contacts || customer.contacts.length === 0">
-                        <a href="#" ng-click="vm.showContactDialog($event, customer)">Add a Contact <i class="material-icons">add</i></a>
+                        <a href="#" ng-click="vm.showContactDialog($event, customer)">Add a Contact <i
+                                class="material-icons">add</i></a>
                     </div>
                     <div layout="row">
-                    <md-input-container flex>
-                        <md-select ng-if="customer.contacts && customer.contacts.length > 0" flex ng-model="customer.selectedContact" ng-model-options="{trackBy: '$value._id'}"
-                                   placeholder="Contacts">
-                            <md-option ng-value="contact" ng-repeat="contact in customer.contacts">{{ contact.firstName }} {{ contact.lastName }} - {{
-                                contact.phone }}
-                            </md-option>
-                        </md-select>
-                    </md-input-container>
-                    <md-input-container ng-if="customer.contacts && customer.contacts.length > 0" flex>
-                        <a href="#" ng-click="vm.deleteContact(customer)"><i class="material-icons">delete</i></a>
-                        <!--<a href="#"><i class="material-icons">call</i></a>-->
-                        <a href="#" ng-click="vm.showContactDialog($event, customer)"><i class="material-icons">add</i></a>
-                    </md-input-container>
+                        <md-input-container flex>
+                            <md-select ng-if="customer.contacts && customer.contacts.length > 0" flex
+                                       ng-model="customer.selectedContact" ng-model-options="{trackBy: '$value._id'}"
+                                       placeholder="Contacts">
+                                <md-option ng-value="contact" ng-repeat="contact in customer.contacts">{{
+                                    contact.firstName }} {{ contact.lastName }} - {{
+                                    contact.phone }}
+                                </md-option>
+                            </md-select>
+                        </md-input-container>
+                        <md-input-container ng-if="customer.contacts && customer.contacts.length > 0" flex>
+                            <a href="#" ng-click="vm.deleteContact(customer)"><i class="material-icons">delete</i></a>
+                            <!--<a href="#"><i class="material-icons">call</i></a>-->
+                            <a href="#" ng-click="vm.showContactDialog($event, customer)"><i
+                                    class="material-icons">add</i></a>
+                        </md-input-container>
                     </div>
                 </div>
                 <br>
-                <md-divider ng-if="!$last" flex="100"></md-divider>
+                <div layout="column">
+                    <md-divider ng-if="!$last" flex="100"></md-divider>
+                </div>
             </md-list-item-text>
 
         </md-list-item>
